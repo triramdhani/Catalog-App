@@ -1,10 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom"
+import Cart from "./pages/Cart/Cart"
+import DetailProduct from "./pages/DetailProduct/DetailProduct"
+import Home from "./pages/Home/Home"
+import ProductCollection from "./pages/ProductCollection/ProductCollection"
 
-function App() {
-  return (
-    <div>succes</div>
+const App = () => {
+  return(
+    <>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/:ID" element={<ProductCollection />} />
+        <Route path="/:id/:id" element={<DetailProduct />} />
+        <Route path="/keranjang" element={<Cart/>}/>
+      </Routes>
+    </>
   )
 }
 
