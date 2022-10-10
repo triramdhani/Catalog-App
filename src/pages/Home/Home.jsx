@@ -1,30 +1,42 @@
 import React , { useState, createContext } from 'react'
 import Header from './Header';
 import Catagories from './Catagories'
-import Products from './Products';
+import ProductHome from './ProductHome';
 import productsData from '/src/data/productsData'
+import { NavLink } from 'react-router-dom';
 const data = productsData[0].data
 
-function Home() {
-  const [cart, setCart] = useState([])  
-  // React.useEffect(() => {
-  //   alert('berhasil ditambahkan ke keranjang');
-  // },[cart])
-  const showModalNav = () => console.log("nice");
+function Home({setCart}) {
+  // const [cart, setCart] = useState([])  
+    const ProductsElement = data.map((product) => {
+    return (
+      <div
+        key={product.collectionId}
+        className="mt-[16px]">
+        <div className='flex justify-between ml-[44px] mr-[44px] mb-[22px]'>
+          <div>Koleksi {product.collectionName}</div>
+          <div className="text-end" > <NavLink to={`/${product.collectionId}`} state={product}> Lihat semua</NavLink></div>
+        </div>
+        <ProductHome
+          id={`${product.collectionsId}`}
+          collectionId={product.collectionId}
+          collections={product.collections}
+          // cart={cart}
+          setCart={setCart}
+        />
+      </div>      
+    )
+  })
+
   return (
     <>
       <Header
         pageTitle="Order From The Best Snack"
-        button={showModalNav}
       />
       <Catagories
         
       />  
-      <Products
-        productsData={data}
-        cart={cart}
-        setCart={setCart}
-      />
+      {ProductsElement}
     </>
   )
 }

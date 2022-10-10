@@ -8,6 +8,7 @@ function LabelPrice({product,  cart , setCart}) {
   const addToCart = () => {
     return  setCart(prevState => {
       let newCart = {name: product.id, price: product.price, qty: 1  }
+      alert('ok')
       return [...prevState, newCart]   
       
     })

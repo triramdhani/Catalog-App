@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom'
 import LabelPrice from './LabelPrice'
 
 
-function Product({ collections, path, cart, setCart }) {
+function Product({ collections, path, setCart }) {
   const Navigate = useNavigate()
   const productElement = collections.map(product => {
     return (
@@ -17,7 +17,7 @@ function Product({ collections, path, cart, setCart }) {
               productPrice={product.price}
               productId={product.id}
               product={product}
-              cart={cart}
+              // cart={cart}
               setCart={setCart}
             />
           </div>
