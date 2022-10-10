@@ -8,7 +8,7 @@
 
 alur tracking bug
 
-1. Index -> App -> Home [Header, catagories, products --> ProductHome]
+1. Index -> App -> Home [Header, catagories] --> ProductHome
 2. --------------- Home -> detailProduct -> wp
 3. --------------- Home -> ProductCollection -> [add to cart , detailproduct]
 

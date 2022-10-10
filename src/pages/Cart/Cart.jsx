@@ -1,13 +1,13 @@
 import React from 'react'
-import HeaderCart from './HeaderCart'
 import CartList from './CartList'
+import CartHeader from './CartHeader'
 import Chekout from './Chekout'
-function Cart() {
+function Cart({cart, setCart}) {
   return (
     <>
-    <HeaderCart />
-      {/* <CartList />
-      <Chekout /> */}
+      <CartHeader cart={cart } />
+      <CartList cart={cart} />
+      <Chekout />
     </>
   )
 }

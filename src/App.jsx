@@ -13,10 +13,15 @@ const App = () => {
   return(
     <>
       <Routes>
-        <Route path="/" element={<Home setCart={setCart } />}/>
+        <Route path="/" element={<Home
+          setCart={setCart}
+        />} />
         <Route path="/:id" element={<ProductCollection setCart={setCart }/>} />
         <Route path="/:id/:id" element={<DetailProduct setCart={setCart }/>} />
-        <Route path="/keranjang" element={<Cart/>}/>
+        <Route path="/keranjang" element={<Cart
+          cart={cart}
+          setCart={setCart}
+        />} />
       </Routes>
     </>
   )
