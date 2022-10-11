@@ -5,11 +5,11 @@ import { Navigate } from 'react-router-dom'
 import LabelPrice from './LabelPrice'
 
 
-function Product({ collections, path, setCart }) {
+function Product({ collections, path, cart ,setCart }) {
   const Navigate = useNavigate()
   const productElement = collections.map(product => {
     return (
-      <div key={product.id} onClick={()=>Navigate(`${path}/${product.id}`)}>
+      <div key={product.id} onClick={()=>Navigate(`${path}/${product.id}`, {state: product})}>
         <div className="relative w-[336px] h-[422px]">
         <img src={product.url} className=" w-[336px] h-[422px]" />
           <div className="absolute bottom-3 left-[15px] right-[15px] bg-slate-400 rounded-lg">
@@ -17,7 +17,7 @@ function Product({ collections, path, setCart }) {
               productPrice={product.price}
               productId={product.id}
               product={product}
-              // cart={cart}
+              cart={cart}
               setCart={setCart}
             />
           </div>

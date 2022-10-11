@@ -11,7 +11,7 @@ function Product({ collectionId, collections, cart, setCart }) {
       
       <div
         key={product.id}
-        onClick={() =>Navigate(`/${collectionId}/${product.id}`, )}
+        onClick={() =>Navigate(`/${collectionId}/${product.id}`, {state: product})}
         className="flex-none"
         >
         <div className="relative w-[336px] h-[422px]">

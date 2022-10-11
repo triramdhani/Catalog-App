@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import Header from '../../components/ui/Header'
 import ProductUi from '../../components/ui/ProductUi'
-function ProductCollection({setCart}) {
+function ProductCollection({setCart ,cart}) {
   const location = useLocation()
   const collection = location.state.collections
 
@@ -17,6 +17,7 @@ function ProductCollection({setCart}) {
           key={collection.id}
           collections={collection}
           path={location.pathname}
+          cart={cart}
           setCart={setCart}
         />
       </main>

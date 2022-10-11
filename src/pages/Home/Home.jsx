@@ -6,8 +6,7 @@ import productsData from '/src/data/productsData'
 import { NavLink } from 'react-router-dom';
 const data = productsData[0].data
 
-function Home({setCart}) {
-  // const [cart, setCart] = useState([])  
+function Home({setCart, cart}) {
     const ProductsElement = data.map((product) => {
     return (
       <div
@@ -21,7 +20,7 @@ function Home({setCart}) {
           id={`${product.collectionsId}`}
           collectionId={product.collectionId}
           collections={product.collections}
-          // cart={cart}
+          cart={cart}
           setCart={setCart}
         />
       </div>      

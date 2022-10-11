@@ -7,17 +7,16 @@ import ProductCollection from "./pages/ProductCollection/ProductCollection"
 
 const App = () => {
   const [cart, setCart]= useState([])
-  useEffect(() => {
-    console.log(cart);;
-  },[cart])
+
   return(
     <>
       <Routes>
         <Route path="/" element={<Home
           setCart={setCart}
+          cart={cart}
         />} />
-        <Route path="/:id" element={<ProductCollection setCart={setCart }/>} />
-        <Route path="/:id/:id" element={<DetailProduct setCart={setCart }/>} />
+        <Route path="/:collectionId" element={<ProductCollection setCart={setCart} cart={cart } />} />
+        <Route path="/:collectionId/:id" element={<DetailProduct setCart={setCart} cart={cart } />} />
         <Route path="/keranjang" element={<Cart
           cart={cart}
           setCart={setCart}
