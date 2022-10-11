@@ -17,11 +17,14 @@ alur tracking bug
 progres :
 
 1. update add to cart
+2. update fungsi dan layout
+3. swiper.js untuk slider
 
 to do :
+prioritas
 
-1. swiper.js untuk slider
-2. memperbaiki bug route
-3. menambah form login
-4. membuat admin dashboard
-5. styling all
+1. memperbaiki bug route
+2. menambah form login
+3. membuat admin dashboard
+
+4. styling all

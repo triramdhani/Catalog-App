@@ -12,7 +12,7 @@ function ProductCollection({setCart ,cart}) {
         pageTitle='Koleksi Sepre'
       />
       <main className='grid '>
-        <div className="bg-slate-100 rounded-lg w-[130px] p-1 text-[14px]"> {collection.length} Items </div>
+        <div className="text-left items-center flex pl-3 bg-slate-100 rounded-lg h-[40px] w-[100px] p-1 ml-[24px] text-[14px]"> <span className='font-bold mr-1'>{collection.length } </span> Items </div>
         <ProductUi
           key={collection.id}
           collections={collection}

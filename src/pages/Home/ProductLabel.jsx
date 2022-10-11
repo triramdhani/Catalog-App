@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 
 
-function LabelPrice({product, cart , setCart}) {
+function LabelPrice({product, cart , setCart, styleLabel}) {
   let cartLength = cart.length
   const addToCart = () => {
-   let isAdded 
+    let isAdded 
     for (let i = 0; i < cartLength ; i++){
       cart[i].name === product.name ? isAdded= true : 'nothing'
     }
@@ -22,16 +22,15 @@ function LabelPrice({product, cart , setCart}) {
   }
 
   return (
-    <div className="flex gap-6 p-1 w-[150px] h-[40px] items-center">
-      <div className='text-[15px] '>{formatCurrency(product.price)}</div> 
+    <div className="flex justify-around gap-[20px]  w-[280px] h-[66px] items-center">
+      <div>{formatCurrency(product.price)}</div> 
       <div
         onClick={(e) => {
           e.stopPropagation()
-          return product.isAvailable === false ? alert("stock kosong") :
-           addToCart()
+          return product.isAvailable === false ? alert("stock habis") : addToCart()
         }}
-          className=" p-[5px] bg-slate-200 rounded-lg">
-          <NavLink to='/keranjang'><ShoppingBagIcon className="h-[18px] w-[18px]" /></NavLink>
+          className="p-[15px] bg-slate-200 rounded-2xl">
+          <NavLink to='/keranjang'><ShoppingBagIcon className="h-[25px] w-[25px]" /></NavLink>
         </div>
       </div>
   )

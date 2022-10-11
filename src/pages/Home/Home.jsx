@@ -16,6 +16,7 @@ function Home({setCart, cart}) {
           <div>Koleksi {product.collectionName}</div>
           <div className="text-end" > <NavLink to={`/${product.collectionId}`} state={product}> Lihat semua</NavLink></div>
         </div>
+        <div className='ml-[24px] mb-[50px]'>
         <ProductHome
           id={`${product.collectionsId}`}
           collectionId={product.collectionId}
@@ -23,6 +24,7 @@ function Home({setCart, cart}) {
           cart={cart}
           setCart={setCart}
         />
+        </div>
       </div>      
     )
   })

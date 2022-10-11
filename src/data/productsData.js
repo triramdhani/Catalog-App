@@ -11,8 +11,8 @@ export default [{
         ukuran : '170 x 170',
         url: '/src/assets/product.png',
         price: 70000,
-        isAvailable: true, 
-        stock: 10
+        isAvailable: false, 
+        stock: 0
       },
       {
         id: 'a.2',
@@ -21,7 +21,7 @@ export default [{
         ukuran : '200 x 170',
         url: '/src/assets/product.png',
         price: 90000,
-        isAvailable: true, 
+        isAvailable: false, 
         stock: 10
       },
       {
@@ -32,7 +32,7 @@ export default [{
         url: '/src/assets/product.png',
         price: 90000,
         isAvailable: true, 
-        stock: 10
+        stock: 110
       },
     ]
   },
@@ -43,12 +43,22 @@ export default [{
       {
         id: 'b.1',
         nama: 'Sarung Bantal',
-        name : 'motif garuda' ,
+        name : 'motif anime' ,
         ukuran : 'kecil',
         url: '/src/assets/product.png',
         price: 10000,
         isAvailable: true, 
-        stock: 10
+        stock: 5,
+        variant: [
+          {
+            url : "",
+            // variant by color atau by size by tipe
+            byColor: 'blue', 
+            byTipe: 'naruto', 
+            bySize: 100 , 
+            stock: 9
+          },
+        ]
       },
       {
         id: 'b.2',
@@ -58,7 +68,7 @@ export default [{
         url: '/src/assets/product.png',
         price: 10000,
         isAvailable: true, 
-        stock: 10
+        stock: 5
       },
     ]
     
