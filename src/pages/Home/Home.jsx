@@ -4,7 +4,14 @@ import Catagories from './Catagories'
 import ProductHome from './ProductHome';
 import productsData from '/src/data/productsData'
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const data = productsData[0].data
+
+const ProductCollection = () => {
+  return (
+    <></>
+  )
+}
 
 function Home({setCart, cart}) {
     const ProductsElement = data.map((product) => {
@@ -14,7 +21,7 @@ function Home({setCart, cart}) {
         className="mt-[16px]">
         <div className='flex justify-between ml-[44px] mr-[44px] mb-[22px]'>
           <div>Koleksi {product.collectionName}</div>
-          <div className="text-end" > <NavLink to={`/${product.collectionId}`} state={product}> Lihat semua</NavLink></div>
+          <div className="text-end" > <Link to={`/${product.collectionId}`} state={product}> Lihat semua</Link></div>
         </div>
         <div className='ml-[24px] mb-[50px]'>
         <ProductHome

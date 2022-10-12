@@ -28,3 +28,7 @@ prioritas
 3. membuat admin dashboard
 
 4. styling all
+
+project postponted due to lack of acknowladge..so i create new project. to gain new experience. back again to this project to re-newed aplication..
+next project : a Blog App
+link to next project : https://github.com/triramdhani/Personal-Blog-App

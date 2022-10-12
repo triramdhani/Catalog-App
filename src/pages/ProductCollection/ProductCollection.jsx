@@ -1,9 +1,11 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 import Header from '../../components/ui/Header'
 import ProductUi from '../../components/ui/ProductUi'
 function ProductCollection({setCart ,cart}) {
   const location = useLocation()
+  console.log(location.state.collections);
   const collection = location.state.collections
 
   return (

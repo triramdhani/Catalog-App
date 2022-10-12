@@ -19,12 +19,15 @@ const App = () => {
           setCart={setCart}
           cart={cart}
         />} />
-        <Route path="/:collectionId" element={<ProductCollection setCart={setCart} cart={cart } />} />
-        <Route path="/:collectionId/:id" element={<DetailProduct setCart={setCart} cart={cart } />} />
-        <Route path="/keranjang" element={<Cart
+        
+          <Route path="/:collectionId" element={<ProductCollection setCart={setCart} cart={cart} />} >
+          </Route>
+            <Route path="/:collectionId/:id" element={<DetailProduct setCart={setCart} cart={cart } />} />            
+        <Route path="keranjang" element={<Cart
           cart={cart}
           setCart={setCart}
-        />} />
+          />} />
+        <Route path="signin" element={<LoginPage/>}/>
       </Routes> : <LoginPage/>
       }
 

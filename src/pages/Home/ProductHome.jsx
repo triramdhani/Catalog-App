@@ -15,7 +15,6 @@ function Product({ collectionId, collections, cart, setCart }) {
       <SwiperSlide
         key={product.id}
         onClick={() =>Navigate(`/${collectionId}/${product.id}`, {state: product})}
-        // className="flex-none "
         className="w-[300px] h-[400px]"
         >
         <div className="relative w-[290px] h-[400px]">

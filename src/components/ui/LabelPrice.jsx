@@ -2,7 +2,7 @@ import React from 'react'
 import {ShoppingBagIcon} from '@heroicons/react/20/solid'
 import formatCurrency from '../../utils/formatCurrency'
 import { useNavigate } from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
+import { NavLink , Link} from 'react-router-dom'
 
 
 function LabelPrice({product, cart , setCart}) {
@@ -31,7 +31,7 @@ function LabelPrice({product, cart , setCart}) {
            addToCart()
         }}
           className=" p-[5px] bg-slate-200 rounded-lg">
-          <NavLink to='/keranjang'><ShoppingBagIcon className="h-[18px] w-[18px]" /></NavLink>
+          <Link to='/keranjang'><ShoppingBagIcon className="h-[18px] w-[18px]" /></Link>
         </div>
       </div>
   )

@@ -1,11 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import LoginButton from '../../components/form/LoginButton'
-
-function LoginPage() {
-  const getLoginData = {
-    email : ""
-  }
+import { NavLink } from 'react-router-dom'
+function SignUpPage() {
   return (
     <>
       <form>
@@ -13,11 +9,11 @@ function LoginPage() {
         <label htmlFor="password">Password</label>
         <input type="text" name='password'/>
         <input type="text" name='email'/>
-        <LoginButton title="Sign In" />
+        <LoginButton title="Sign Up" />
       </form>
-      <div>Have You Sign Up ? <NavLink to='/signUp'>Sign Up</NavLink>now !!!</div>
+      <div>already Sign Up ? <NavLink to='/signin'>SignIn </NavLink>now !!!</div>
     </>
   )
 }
 
-export default LoginPage
+export default SignUpPage
